@@ -3,13 +3,19 @@
 .open-sans-barFont {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
+    font-weight: 900;
+    font-style: italic;
     font-variation-settings:
-      "wdth" 100;
+      "wdth" 62;
+    
   }
 
-  
 .navbar-brand {
-    font-size: 100px; /* Bigger font for the brand name */
+    font-size: 26px !important; 
+    padding-left: 1px;
+    font-family: "Open Sans", sans-serif; 
+    color: #fff; 
+
+    
+
 }
