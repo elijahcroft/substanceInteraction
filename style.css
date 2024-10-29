@@ -1,21 +1,49 @@
-
-
 .open-sans-barFont {
-    font-family: "Open Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: italic;
-    font-variation-settings:
-      "wdth" 62;
-    
-  }
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 62;
+  
+}
 
 .navbar-brand {
-    font-size: 26px !important; 
-    padding-left: 1px;
-    font-family: "Open Sans", sans-serif; 
-    color: #fff; 
+  font-size: 26px !important; 
+  padding-left: 1px;
+  font-family: "Open Sans", sans-serif; 
+  color: #fff; 
+  
+  
 
-    
+}
 
+.section-name {
+  padding-left: 150px;
+  padding-top: 25px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  text-decoration:underline;
+
+}
+
+.row{
+  padding-bottom: 25px;
+}
+
+.substance-list{
+  padding-left: 25px;
+}
+
+.left{
+  background-color: rgb(171, 171, 171);
+  color: #fff;
+  float: left;
+  width: 45%;
+}
+
+.right{
+  background-color:#ffffff;
+  float: right;
+  width: 55%;
 }
