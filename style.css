@@ -8,12 +8,17 @@
   
 }
 
+.html{
+  background-color: #474E68;
+}
+
+
 .navbar-brand {
   font-size: 26px !important; 
   padding-left: 1px;
   font-family: "Open Sans", sans-serif; 
   color: #fff; 
-  
+  position: -webkit-sticky ;
   
 
 }
@@ -33,17 +38,23 @@
 
 .substance-list{
   padding-left: 25px;
+  
 }
 
 .left{
-  background-color: rgb(171, 171, 171);
+  background-color: #474E68;
   color: #fff;
   float: left;
   width: 45%;
+  padding-left: 2%;
 }
 
 .right{
-  background-color:#ffffff;
+  background-color:#474E68;
   float: right;
   width: 55%;
+  height: 100vh;
+  overflow-y: hidden;
+  position: sticky;
+  
 }
