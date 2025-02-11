@@ -20,7 +20,13 @@
   color: #fff; 
   position: -webkit-sticky ;
   
+  
 
+}
+
+.substance-button{
+  margin: 10px;
+  border-radius: 10px;
 }
 
 .section-name {
@@ -57,4 +63,12 @@
   overflow-y: hidden;
   position: sticky;
   
+}
+.card-body{
+  border-radius: 20px;
+}
+
+.greyed {
+  background-color: grey;
+  opacity: 0.5;
 }
