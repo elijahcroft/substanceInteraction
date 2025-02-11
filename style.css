@@ -17,17 +17,18 @@
     "wdth" 100;
 }
 
-.html{
-  background-color: #474E68;
-}
 
-.body{
+
+html, body{
   background-color: #474E68;
   font-family: "Open Sans", sans-serif; 
+  overflow: hidden;
+  height: 100vh;
   
 }
 .navbar{
   background-color: #121212; 
+  z-index: 100000;
 }
 
 .navbar-brand {
@@ -43,13 +44,16 @@
 
 .substance-button{
   margin: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   height: 100px;
   background-color: #1f2227;
   font-family: "Open Sans", sans-serif !important; 
   color:#D3D3D3;
-  border-color: transparent;
+  border-color: #D3D3D3;
+  box-shadow: 1px 1px #D3D3D3;
   font-size: x-large;
+  
+
 }
 
 .section-name {
@@ -78,17 +82,27 @@
   float: left;
   width: 45%;
   padding-left: 2%;
-  height: 100vh;
+  height: 100%;
+  overflow-y: auto;
+  
+}
+.left::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome, Safari, Edge */
 }
 
-.right{
-  background-color:#121212;
+.right {
+  background-color: #121212;
   float: right;
   width: 55%;
   height: 100vh;
-  overflow-y: hidden;
-  position: sticky;
+  overflow: hidden; /* Ensure it does not scroll */
+  position: fixed; /* Keep it fixed to the viewport */
+  right: 0; /* Align it properly */
+  top: 0;
   
+}
+.container-fluid{
+  overflow-y: hidden;
 }
 .card-body{
   border-radius: 20px;
@@ -96,11 +110,18 @@
 
   
   color: #fff;
+  
+  
 
 }
 .card{
   background-color: #872341;
   margin-right: 20%;
+  border-width: 10px;
+  border-color: #D3D3D3;
+  border-color: #D3D3D3;
+  box-shadow: 0px 0px 1px 1px #D3D3D3;
+  margin-top: 100px;
 }
 
 .greyed {
