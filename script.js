@@ -3,22 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let infoBox = document.querySelector('.card-body');
 
     buttons.forEach(button => {
-        button.addEventListener('click', function(event) {  // Include event in the function parameter
-            console.log('Button clicked:');
+        button.addEventListener('click', function(event) {  
             let drugName = event.target.value;
 
             // Toggle opacity and add/remove the drug name
-            if (this.style.opacity === '0.7') {
-                this.style.opacity = '1';
-                let existingParagraph = Array.from(infoBox.children).find(p => p.textContent === drugName);
-
-                if (existingParagraph) {
-                    infoBox.removeChild(existingParagraph);  
+            buttons.forEach(btn => {
+                if (btn.value === drugName) {
+                    // Grey out the button
+                    btn.style.opacity = (btn.style.opacity === '0.7') ? '1' : '0.7';
                 }
-            } else {
-                this.style.opacity = '0.7';
+            });
 
-                let newParagraph = document.createElement('p');  
+            // Add or remove the drug name in the info box
+            let existingParagraph = Array.from(infoBox.children).find(p => p.textContent === drugName);
+            if (existingParagraph) {
+                infoBox.removeChild(existingParagraph); 
+            } else {
+                let newParagraph = document.createElement('p');
                 newParagraph.textContent = drugName;  
                 infoBox.appendChild(newParagraph);  
             }
