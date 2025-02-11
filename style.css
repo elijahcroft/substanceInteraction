@@ -12,6 +12,9 @@
   background-color: #474E68;
 }
 
+.body{
+  background-color: #474E68;
+}
 
 .navbar-brand {
   font-size: 26px !important; 
@@ -27,6 +30,7 @@
 .substance-button{
   margin: 10px;
   border-radius: 10px;
+  height: 100px;
 }
 
 .section-name {
@@ -72,3 +76,4 @@
   background-color: grey;
   opacity: 0.5;
 }
+

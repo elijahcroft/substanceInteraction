@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const cards = document.querySelectorAll(".substance-button");
+document.addEventListener('DOMContentLoaded', () => {
+    let buttons = document.querySelectorAll('.substance-button');
 
-    cards.forEach(card => {
-        card.addEventListener('click', function(event) {
-            console.log('Element clicked!', event.target);
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log('Button clicked:');
+            this.style.opacity = '0.7';
+            this.disabled = true;
         });
     });
 });
