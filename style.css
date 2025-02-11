@@ -1,11 +1,20 @@
 .open-sans-barFont {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 900;
+  font-weight: 600;
   font-style: italic;
   font-variation-settings:
     "wdth" 62;
   
+}
+
+.open-sans{
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .html{
@@ -14,14 +23,16 @@
 
 .body{
   background-color: #474E68;
+  font-family: "Open Sans", sans-serif; 
+  
 }
 
 .navbar-brand {
   font-size: 26px !important; 
   padding-left: 1px;
-  font-family: "Open Sans", sans-serif; 
+  
   color: #fff; 
-  position: -webkit-sticky ;
+  position: -webkit-sticky;
   
   
 
@@ -31,14 +42,18 @@
   margin: 10px;
   border-radius: 10px;
   height: 100px;
+  background-color: #B9B4C7;
+  font-family: "Open Sans", sans-serif !important; 
 }
 
 .section-name {
+  font-size: 26px !important; 
   padding-left: 150px;
   padding-top: 25px;
   font-family: "Open Sans", sans-serif;
   color: #fff;
-  text-decoration:underline;
+  text-decoration: underline;
+  
 
 }
 
@@ -57,6 +72,7 @@
   float: left;
   width: 45%;
   padding-left: 2%;
+  height: 100vh;
 }
 
 .right{
@@ -70,6 +86,7 @@
 }
 .card-body{
   border-radius: 20px;
+  height: 75vh;
 }
 
 .greyed {
