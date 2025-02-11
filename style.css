@@ -84,7 +84,7 @@ html, body{
   padding-left: 2%;
   height: 100%;
   overflow-y: auto;
-  
+  padding-bottom: 100px;
 }
 .left::-webkit-scrollbar {
   display: none; /* Hide scrollbar in Chrome, Safari, Edge */
