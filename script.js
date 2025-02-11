@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             else{
                 this.style.opacity = '.7';
-                infoBox.innerHTML = `<p>button pressed</p>`; // Display effect info
+                infoBox.innerHTML = `<p>button pressed</p>`;
                 
             }
             
