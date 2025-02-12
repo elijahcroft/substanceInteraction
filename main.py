@@ -8,8 +8,8 @@ drugs_db = {
     "alcohol": ["relaxation", "impaired judgment", "euphoria", "increased sociability"],
     "caffeine": ["increased alertness", "energy boost", "nervousness", "insomnia"],
     "marijuana": ["euphoria", "relaxation", "increased appetite", "altered perception of time"]
+
     
-    # Add more drugs as needed
 }
 
 # Create an endpoint to return the effects of a drug
