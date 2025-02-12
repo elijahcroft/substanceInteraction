@@ -18,10 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
             let existingParagraph = Array.from(infoBox.children).find(p => p.textContent === drugName);
             if (existingParagraph) {
                 infoBox.removeChild(existingParagraph); 
+           
             } else {
                 let newParagraph = document.createElement('p');
                 newParagraph.textContent = drugName;  
+                
                 infoBox.appendChild(newParagraph);  
+                
+                 
             }
         });
     });
