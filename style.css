@@ -8,6 +8,15 @@
   
 }
 
+:root {
+  color-scheme: dark;
+}
+.center {
+  margin: auto;
+  width:60%;
+  border: 3px;
+  padding: 10px;
+}
 .open-sans{
   font-family: "Open Sans", serif;
   font-optical-sizing: auto;
@@ -24,7 +33,7 @@
 }
 
 html, body{
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)) !important;
+  background: radial-gradient(circle, rgba(50, 50, 50, .1), rgba(0, 0, 0, 1)) !important;
   font-family: "Open Sans", sans-serif; 
   overflow: auto;
   height: 100vh;
@@ -80,7 +89,7 @@ html, body{
 }
 
 .left{
-  background: radial-gradient(circle, rgba(100, 100, 100, 0.1), rgba(0, 0, 0, 1)) !important;
+  background: radial-gradient(circle, rgba(50, 50, 50, 0.1), rgba(0, 0, 0, 1)) !important;
   
   color: #fff;
   float: left;
@@ -137,7 +146,7 @@ html, body{
 
 
 .why-reduction{
-  margin: 1% 10% 5% 5;
+  margin: 10% 10% 5% 5;
   background-color: transparent;
   color: #D3D3D3;
   border-radius: 20px;
@@ -152,9 +161,18 @@ html, body{
   font-size: 50px; 
   margin-left: 10px;
 }
-.why-reduction h2{
+.why-reduction p{
   font-size: 25px; 
   margin-left: -10px;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.why-reduction h2{
+  font-size: 30px; 
+  margin-left: 10px;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  
 }
 
 .drug-box{
@@ -184,3 +202,17 @@ html, body{
   width: 100%; /* Adjust width */
   border-radius: 10%;
   }
+
+.pill-image{
+  margin: auto; 
+}
+
+.lines{
+  margin: -50px -50px -50px 100px;
+}
+.lines img{
+  border: 2px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  filter: grayscale(50%);
+}
