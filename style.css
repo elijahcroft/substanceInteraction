@@ -31,6 +31,12 @@
   border-top: 1px solid white; /* You can change the color and thickness */
   width: 100%; /* Adjust width */
 }
+.half-line{
+  border: 0;
+  border-top: 1px solid white;
+  width: 100%;
+  margin: -2px 0 -2px 0;
+}
 
 html, body{
   background: radial-gradient(circle, rgba(50, 50, 50, .1), rgba(0, 0, 0, 1)) !important;
@@ -44,6 +50,7 @@ html, body{
   z-index: 100000;
 }
 
+
 .navbar-brand {
   font-size: 26px !important; 
   padding-left: 1px;
@@ -55,6 +62,13 @@ html, body{
 
 }
 
+.nav-menu{
+  text-align: start;
+  width: 14.5vw;
+  float: right;
+  align-items: start;
+}
+
 .substance-button{
   margin: 20px;
   border-radius: 12px;
@@ -63,18 +77,24 @@ html, body{
   font-family: "Open Sans", sans-serif !important; 
   color:#D3D3D3;
   border-color: transparent;
-  font-size: x-large;
+  font-size: xx-large;
+  box-shadow:   0px 1px 11px -8px #fff;
+
   
 
 }
 
 .section-name {
-  font-size: 26px !important; 
+  font-size: 65px !important; 
+  
+  letter-spacing: .2px;
+  
   padding-left: 150px;
   padding-top: 25px;
   font-family: "Open Sans", sans-serif;
   color: #D3D3D3;
   text-decoration: underline;
+  
   
 
 }
