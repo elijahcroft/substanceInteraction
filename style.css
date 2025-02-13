@@ -40,7 +40,7 @@ html, body{
   
 }
 .navbar{
-  background-color: #121212; 
+  background-color: #000401; 
   z-index: 100000;
 }
 
@@ -142,6 +142,11 @@ html, body{
   opacity: 0.5;
 }
 
+.important{
+  color: #D3D3D3;
+  text-decoration: underline;
+  font-weight: bolder;
+}
 
 
 
@@ -158,19 +163,20 @@ html, body{
 }
 
 .why-reduction h1{
-  font-size: 50px; 
+  font-size: 65px; 
   margin-left: 10px;
+  letter-spacing: .2px;
 }
 .why-reduction p{
-  font-size: 25px; 
-  margin-left: -10px;
-  letter-spacing: 1px;
-  line-height: 1.3;
+  font-size: 22px; 
+  margin-left: -5px;
+  
+  
 }
 .why-reduction h2{
   font-size: 30px; 
   margin-left: 10px;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   line-height: 1.5;
   
 }
@@ -202,17 +208,50 @@ html, body{
   width: 100%; /* Adjust width */
   border-radius: 10%;
   }
+.drug-button{
+  float: right;
+  width: 40%;
+  height: 25%;
+  background-color: #121212;
+  border-color: transparent;
+  color: #fff;
+  font-size: x-large;
+  text-align: end;
+  font-weight: bolder;
+  border-radius: 40px;
+}
+
+.drug-button:hover {
+  background-color: #fff;
+  color: #121212
+}
 
 .pill-image{
   margin: auto; 
 }
 
 .lines{
-  margin: -50px -50px -50px 100px;
+  margin: -50px -50px -50px 20px;
 }
 .lines img{
   border: 2px;
-  border-radius: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  filter: grayscale(50%);
+  border-radius: 50px;
+  box-shadow:   0px 0px 12px -8px #fff;
+  filter: grayscale(80%);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.fade-in-late{
+  opacity: 0;
+  animation: fadeIn 5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
