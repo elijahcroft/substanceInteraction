@@ -48,6 +48,7 @@ html, body{
 .navbar{
   background-color: #000401; 
   z-index: 100000;
+  height: 80px;
 }
 
 
@@ -140,12 +141,9 @@ html, body{
 .card-body{
   border-radius: 20px;
   height: 75vh;
-
-  
   color: #fff;
-  
-  
-
+  overflow-y: auto; /* Ensure scrolling if content overflows */
+  padding: 10px; /* Add padding for better readability */
 }
 .card{
   background-color: #872341;
@@ -163,7 +161,7 @@ html, body{
 }
 
 .important{
-  color: #D3D3D3;
+  color: #679bbe;
   text-decoration: underline;
   font-weight: bolder;
 }
@@ -183,12 +181,12 @@ html, body{
 }
 
 .why-reduction h1{
-  font-size: 65px; 
+  font-size: 50px; 
   margin-left: 10px;
   letter-spacing: .2px;
 }
 .why-reduction p{
-  font-size: 25px; 
+  font-size: 20px; 
   margin-left: -5px;
   
   
@@ -205,11 +203,13 @@ html, body{
   background-color: #121212 ;
   color: #D3D3D3;
   height: 400px;
+  width: 80%;
   border-radius: 20px;
   box-shadow:   0px 0px 10px -8px #fff;
   align-content: start;
   padding: 1em;
-  
+  margin-left: 20px;
+  padding-top: 20px;
 }
 .drug-box h1{
   font-size: 30px;
@@ -240,6 +240,10 @@ html, body{
   font-weight: bolder;
   border-radius: 40px;
 }
+.drug-link{
+  background-color: #872341;
+  text-decoration: none;
+}
 
 .drug-button:hover {
   background-color: #fff;
@@ -252,12 +256,15 @@ html, body{
 
 .lines{
   margin: -50px -50px -50px 20px;
+  
 }
 .lines img{
   border: 2px;
   border-radius: 50px;
   box-shadow:   0px 0px 12px -8px #fff;
   filter: grayscale(80%);
+  width: 50%;
+  height: auto;
 }
 
 .fade-in {
@@ -275,3 +282,5 @@ html, body{
     opacity: 1;
   }
 }
+
+
