@@ -30,7 +30,7 @@ export default function Home() {
         <div className="bg-zinc-800 p-6 rounded-lg shadow-[0_0_10px_rgba(255,255,255,0.05)] w-full max-w-4xl text-xl mb-8">
           <h1 className="text-4xl mb-3">Who Are We</h1>
           <p>
-            I'm Elijah, a student of computer science and philosophy who believes that technology can serve as a moral tool.
+            I&rsquo;m Elijah, a student of computer science and philosophy who believes that technology can serve as a moral tool.
             Safe drug use is something I care deeply about—not just because of its importance to health, but because I believe
             every person deserves access to knowledge that can protect their life. This project is a reflection of that belief.
           </p>

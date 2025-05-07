@@ -123,7 +123,7 @@ export default function Learn() {
             <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
               <h2 className="text-xl font-semibold mb-2"> 📞 Seek support if needed</h2>
               <p>
-               Drugs can be overwhelming especially if its your first time. Whether it&rsquo;s a friend, therapist, or hotline, there&rsquo;s no shame in reaching out. You're not alone.
+               Drugs can be overwhelming especially if its your first time. Whether it&rsquo;s a friend, therapist, or hotline, there&rsquo;s no shame in reaching out. You&rsquo;re not alone.
 
 
 
