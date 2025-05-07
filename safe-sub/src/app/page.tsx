@@ -164,13 +164,13 @@ export default function Home() {
               <>
                 <button
                   onClick={checkInteractions}
-                  className="bg-zinc-800/30 backdrop-blur-md hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-zinc-600 transition-all duration-300 ease-in-out"
+                  className="text-sm md:text-base bg-zinc-800/30 backdrop-blur-md hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-zinc-600 transition-all duration-300 ease-in-out"
                 >
                   Check Interactions
                 </button>
                 <button
                   onClick={handleClear}
-                  className="bg-zinc-800/30 backdrop-blur-md hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-zinc-600 transition-all duration-300 ease-in-out"
+                  className="text-sm md:text-base bg-zinc-800/30 backdrop-blur-md hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-zinc-600 transition-all duration-300 ease-in-out"
                 >
                   Clear All
                 </button>
@@ -181,7 +181,7 @@ export default function Home() {
           </div>
 
           {/* Input Fields */}
-          <div className="relative w-150 text-lg">
+          <div className="w-full max-w-xs md:max-w-md text-lg">
             <input
               type="text"
               placeholder="Search Drugs"
@@ -190,6 +190,8 @@ export default function Home() {
               onKeyPress={handleKeyPress}
               className="w-full p-4 rounded-t-md bg-zinc-800/30 backdrop-blur-md border border-zinc-600 text-white"
             />
+            <div className="relative w-full max-w-md mx-auto">
+
             <div
               className={`bg-zinc-800/100 backdrop-blur-md border border-zinc-200 rounded-b-md w-full absolute z-10 overflow-y-auto text-left transition-all duration-300 ease-in-out transform origin-top ${
                 suggestions.length > 0 ? 'opacity-100 scale-y-100 max-h-52' : 'opacity-0 scale-y-0 max-h-0'
@@ -206,13 +208,15 @@ export default function Home() {
               ))}
             </div>
           </div>
+          </div>
 
           {/* Interaction Message */}
           {interactionMessage && (
             <div
-              className={`-mt-5 bg-zinc-800 text-white p-4 rounded-md w-96 text-left text-xl space-y-2 border border-zinc-600 transform transition-all duration-300 hover:scale-101 w-150 ${
-                suggestions.length > 0 ? 'mt-52' : '-mt-2' // Adjust margin based on suggestions
-              }`}
+            className={`-mt-5 bg-zinc-800 text-white p-4 rounded-md w-full max-w-xs md:max-w-md text-left text-sm md:text-xl space-y-2 border border-zinc-600 transform transition-all duration-300 hover:scale-101 ${
+              suggestions.length > 0 ? 'mt-52' : '-mt-2'
+            }`}
+            
             >
               {interactionMessage.split('\n').map((line, idx) => (
                 <div key={idx}>{line}</div>
