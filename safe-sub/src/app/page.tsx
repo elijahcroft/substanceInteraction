@@ -164,7 +164,7 @@ export default function Home() {
               <>
                 <button
                   onClick={checkInteractions}
-                  className="text-sm md:text-base bg-zinc-800/30 backdrop-blur-md hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-zinc-600 transition-all duration-300 ease-in-out"
+                  className="text-sm md:text-base bg-zinc-800/30 backdrop-blur-md hover:bg-blue-500 text-white font-bold rounded-md py-2 px-2 border-1 border-zinc-600 transition-all duration-300 ease-in-out"
                 >
                   Check Interactions
                 </button>
