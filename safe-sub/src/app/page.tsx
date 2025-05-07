@@ -145,14 +145,16 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-full h-full bg-zinc-900">
+     <div className="w-full min-h-screen bg-zinc-900 bg-[radial-gradient(ellipse_at_75%_80%,_rgba(255,255,255,0.015)_0%,_transparent_100%)]">
+
         {/* Navbar */}
         <Navbar />
 
         {/* Main content */}
         <div className="flex flex-col items-center text-center p-20 space-y-10" style={{ minHeight: '500px' }}>
-          <div>
-            <p className="text-5xl font-bold text-white">Understand the Risks of</p>
+          <div className="text-5xl font-bold text-white ">
+          
+            <p className="text-5xl font-bold text-white">Understand the <span className='animate-pulse text-red-100'>Risks</span> of</p>
             <p className="text-5xl font-bold text-white mt-3">Mixing Drugs</p>
           </div>
 
@@ -162,13 +164,13 @@ export default function Home() {
               <>
                 <button
                   onClick={checkInteractions}
-                  className="bg-zinc-900 hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-white transition-all duration-300 ease-in-out"
+                  className="bg-zinc-800/30 backdrop-blur-md hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-zinc-600 transition-all duration-300 ease-in-out"
                 >
                   Check Interactions
                 </button>
                 <button
                   onClick={handleClear}
-                  className="bg-zinc-900 hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-white transition-all duration-300 ease-in-out"
+                  className="bg-zinc-800/30 backdrop-blur-md hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-zinc-600 transition-all duration-300 ease-in-out"
                 >
                   Clear All
                 </button>
@@ -179,25 +181,25 @@ export default function Home() {
           </div>
 
           {/* Input Fields */}
-          <div className="relative w-96">
+          <div className="relative w-96 text-lg">
             <input
               type="text"
               placeholder="Search Drugs"
               value={drugInput}
               onChange={handleInputChange}
               onKeyPress={handleKeyPress}
-              className="w-full p-4 rounded-t-md bg-zinc-800 border border-zinc-600 text-white"
+              className="w-full p-4 rounded-t-md bg-zinc-800/30 backdrop-blur-md border border-zinc-600 text-white"
             />
             {suggestions.length > 0 && (
               <div
-                className="bg-zinc-800 border border-zinc-200 rounded-b-md w-full absolute z-10 overflow-y-auto"
+                className="bg-zinc-800/100   backdrop-blur-md border border-zinc-200 rounded-b-md w-full absolute z-10 overflow-y-auto"
                 style={{ maxHeight: '200px' }}
               >
                 {suggestions.map((drug, index) => (
                   <div
                     key={index}
                     onClick={() => handleSuggestionClick(drug)}
-                    className="p-3 text-white hover:bg-zinc-600 cursor-pointer text-xl"
+                    className="p-3 text-white hover:bg-zinc-600 cursor-pointer text-lg"
                   >
                     {drug}
                   </div>
@@ -206,8 +208,13 @@ export default function Home() {
             )}
           </div>
 
+          {/* Interaction Message */}
           {interactionMessage && (
-            <div className="mt-4 bg-zinc-800 text-white p-4 rounded-md w-96 text-left text-xl space-y-2 border border-zinc-600">
+            <div
+              className={`-mt-1 bg-zinc-800 text-white p-4 rounded-md w-96 text-left text-xl space-y-2 border border-zinc-600 transform transition-all duration-300 hover:scale-101 ${
+                suggestions.length > 0 ? 'mt-52' : 'mt-4' // Adjust margin based on suggestions
+              }`}
+            >
               {interactionMessage.split('\n').map((line, idx) => (
                 <div key={idx}>{line}</div>
               ))}
@@ -219,7 +226,7 @@ export default function Home() {
             {drugList.map((drug, index) => (
               <div
                 key={index}
-                className="flex items-center bg-zinc-800 text-white py-2 px-4 rounded-md shadow-md border border-lg"
+                className="flex items-center bg-zinc-800/30 backdrop-blur-md text-white py-2 px-6 rounded-md shadow-md border border-zinc-600 min-w-20 transform transition-all duration-300 hover:scale-101 text-lg"
               >
                 <span className="mr-2">{drug}</span>
                 <button

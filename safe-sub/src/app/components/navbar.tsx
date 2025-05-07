@@ -23,9 +23,13 @@ export default function Navbar() {
 
   return (
     <div className="flex justify-between items-center mb-5 px-10 bg-zinc-900 h-20">
-      <div className="basis-64 text-left p-1">
-        <p className="text-3xl">SafeSubstance</p>
-      </div>
+      <div className="basis-64 text-left p-1 flex items-center gap-2">
+      <p className="text-3xl">SafeSubstance</p>
+        <img src="/pill.svg" alt="Logo" className="w-8 h-8" />
+        
+        </div>
+
+      
       <div className="flex gap-x-5">
         <Link href="/" className={linkClass('/')}>Home</Link>
         <Link href="/near" className={linkClass('/near')}>Near You</Link>
