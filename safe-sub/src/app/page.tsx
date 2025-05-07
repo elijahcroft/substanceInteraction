@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import Head from 'next/head';
+
 import Navbar from './components/navbar';
 import { getInteraction } from './components/getInteractions';
 const aliasMap: { [key: string]: string } = {

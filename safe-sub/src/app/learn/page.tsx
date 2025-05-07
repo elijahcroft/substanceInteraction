@@ -55,7 +55,7 @@ export default function Learn() {
             <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
               <h2 className="text-xl font-semibold mb-2">📚 Research effects and interactions</h2>
               <p>
-              Know what you’re taking, how it works, and what it doesn’t mix well with—knowledge reduces risk.
+              Know what you&rsquo;re taking, how it works, and what it doesn&rsquo;t mix well with—knowledge reduces risk.
               </p>
             </div>
             
@@ -67,7 +67,7 @@ export default function Learn() {
             <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform ">
               <h2 className="text-xl font-semibold mb-2">🐢 Go slow</h2>
               <p>
-              Give your body time to respond; effects can build, and more isn’t always better.
+              Give your body time to respond; effects can build, and more isn&rsquo;t always better.
               </p>
             </div>
             
@@ -108,19 +108,19 @@ export default function Learn() {
             <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
               <h2 className="text-xl font-semibold mb-2">🪞 Reflect on the experience</h2>
               <p>
-              Think about how it went—what you enjoyed, what felt off, and what you’d do differently next time. Writing it down or talking it out with a friend can help process and integrate the experience.
+              Think about how it went—what you enjoyed, what felt off, and what you&rsquo;d do differently next time. Writing it down or talking it out with a friend can help process and integrate the experience.
               </p>
             </div>
             <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
               <h2 className="text-xl font-semibold mb-2">🧹 Clean up safely</h2>
               <p>
-              Properly dispose of any leftover materials, test kits, or sharps. Keeping your space clean and safe isn’t just hygiene, it’s self-respect and community care.
+              Properly dispose of any leftover materials, test kits, or sharps. Keeping your space clean and safe isn&rsquo;t just hygiene, it&rsquo;s self-respect and community care.
               </p>
             </div>
             <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
               <h2 className="text-xl font-semibold mb-2"> 📞 Seek support if needed</h2>
               <p>
-               Drugs can be overwhelming especially if its your first time. Whether it’s a friend, therapist, or hotline, there’s no shame in reaching out. You're not alone.
+               Drugs can be overwhelming especially if its your first time. Whether it&rsquo;s a friend, therapist, or hotline, there&rsquo;s no shame in reaching out. You're not alone.
 
 
 

@@ -20,9 +20,9 @@ export default function Home() {
         <div className="bg-zinc-800 p-6 rounded-lg shadow-[0_0_10px_rgba(255,255,255,0.05)] w-full max-w-4xl text-xl mb-8">
           <h1 className="text-4xl mb-3">Why We Built This</h1>
           <p>
-            As college students, we’re constantly surrounded by a culture where drug use, recreational or otherwise, is
+            As college students, we&rsquo;re constantly surrounded by a culture where drug use, recreational or otherwise, is
             common, yet rarely discussed in honest terms. Searching for help can feel embarrassing or even risky.
-            We built this tool because we believe knowledge should never be gatekept. This site doesn’t promote drug use;
+            We built this tool because we believe knowledge should never be gatekept. This site doesn&rsquo;t promote drug use;
             it promotes informed decisions, reduces misinformation, and encourages responsible behavior in an imperfect world.
           </p>
         </div>
