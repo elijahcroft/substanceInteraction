@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-
+import Image from 'next/image';
 import Navbar from './components/navbar';
 import { getInteraction } from './components/getInteractions';
 const aliasMap: { [key: string]: string } = {
@@ -227,12 +227,12 @@ export default function Home() {
                 key={index}
                 className="flex items-center bg-zinc-800/30 backdrop-blur-md text-white py-2 px-6 rounded-md shadow-md border border-zinc-600 min-w-20 transform transition-all duration-300 hover:scale-101 text-lg"
               >
-                <span className="mr-2">{drug}</span>
+                <span className="mr-5">{drug}</span>
                 <button
                   onClick={() => removeDrug(drug)}
                   className="-mr-3 cursor-pointer"
                 >
-                  <img src="/delete.svg" alt="Delete" className="w-5 h-2" />
+                  <Image src="/delete.svg" alt="Delete" width={10} height={8}/>
                 </button>
               </div>
             ))}

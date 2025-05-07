@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar";
+import Image from 'next/image';
 
 export default function Learn() {
   return (
@@ -20,10 +21,12 @@ export default function Learn() {
             </p>
           </div>
           <div className="md:w-1/2">
-            <img
+            <Image
               src="/harm.jpg"
               alt="Harm Reduction Visual"
               className="rounded-lg shadow-lg"
+              width={1000}            // Required
+            height={1000}  
             />
           </div>
         </div>
