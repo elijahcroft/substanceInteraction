@@ -1,28 +1,59 @@
 "use client"
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Navbar from './components/navbar';
+import { getInteraction } from './components/getInteractions';
+const aliasMap: { [key: string]: string } = {
+  "Weed": "Cannabis",
+  "Pot": "Cannabis",
+  "Marijuana": "Cannabis",
+  "Tylenol": "Acetaminophen",
+  "Advil": "Ibuprofen",
+  "Valium": "Diazepam",
+  "Molly": "MDMA",
+  "Ecstacy": "MDMA",
+  "Acid": "LSD",
+  "Shrooms": "Mushrooms",
+  "Percocet": "Oxycodone",
+  "Methamphetamine": "Amphetamines",
+  "Lean": "Opioids",
 
-// Predefined drug options
+  "Adderall" : "Amphetamines",
+  "Hydrocodone": "Opioids",
+  "Vicodin": "Opioids",
+  "Codeine": "Opioids",
+  
+  
+  "Heroin": "Opioids",
+  "Fentanyl": "Opioids",
+  "Tramadol": "Tramadol"
+};
 const drugOptions = [
-  "Aspirin",
-  "Ibuprofen",
-  "Caffeine",
-  "Paracetamol",
-  "Codeine",
-  "Weed", 
-  "Tylenol",
-  "Advil",
-  "Naproxen",
-  // Add more drugs to the list
+  "LSD", "Mushrooms", "DMT", "Mescaline", "DOx", "NBOMes", "2C-x", "2C-T-x", "5-MeO-xXT", "Cannabis",
+  "Ketamine", "MXE", "DXM", "Nitrous", "Amphetamines", "MDMA", "Cocaine", "Caffeine", "Alcohol",
+  "GHB/GBL", "Opioids", "Tramadol", "Benzodiazepine", "MAOIs", "SSRIs",
+     "Zoloft", "Xanax", "Tylenol", "Ibuprofen", "Benadryl", "Melatonin", "Oxycodone", "Valium", "Lexapro"
 ];
+
+const extendedDrugOptions = [...drugOptions, ...Object.keys(aliasMap)];
+
+
+
+
+
+
 
 export default function Home() {
   const [drugInput, setDrugInput] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [drugList, setDrugList] = useState<string[]>([]);
   const [interactionMessage, setInteractionMessage] = useState<string | null>(null);
+  const [interactionMap, setInteractionMap] = useState<{ [key: string]: string }>({});
+  useEffect(() => {
+    getInteraction().then(setInteractionMap).catch(console.error);
+  }, []);
+  
 
   // Filter drug suggestions based on user input
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,61 +62,87 @@ export default function Home() {
 
     // Show suggestions if input is not empty
     if (input) {
-      const filteredSuggestions = drugOptions.filter(
+      const filteredSuggestions = extendedDrugOptions.filter(
         (drug) =>
           drug.toLowerCase().startsWith(input.toLowerCase()) &&
-          !drugList.includes(drug) // Exclude already added drugs
+          !drugList.includes(aliasMap[drug.toLowerCase()] || drug)
       );
+      
       setSuggestions(filteredSuggestions);
     } else {
       setSuggestions([]);
     }
   };
-
+ 
   // Add selected drug to the list
   const addDrug = (drug: string) => {
-    if (drug && !drugList.includes(drug)) {
-      setDrugList([...drugList, drug]);
+    const normalized = aliasMap[drug] || drug;
+  
+    if (!drugList.includes(normalized)) {
+      setDrugList([...drugList, normalized]);
       setDrugInput('');
-      setSuggestions([]); // Clear suggestions after selection
-      setInteractionMessage(null); // Clear the interaction message
+      setSuggestions([]);
+      
     }
   };
+  
+  
+  
 
   // Handle when a suggestion is clicked
   const handleSuggestionClick = (drug: string) => {
-    addDrug(drug);
+    addDrug(drug);  
   };
 
   // Handle key press for 'Enter' to add the drug
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && drugInput.trim() !== '' && drugList.includes(drugInput)) {
+    if (e.key === 'Enter' && drugInput.trim() !== '' && suggestions.includes(drugInput.trim())) {
       addDrug(drugInput.trim());
-    }else if(e.key === 'Enter'){
-      addDrug(suggestions[0])
+    } else if (e.key === 'Enter' && suggestions.length > 0) {
+      addDrug(suggestions[0]);
     }
+    
   };
-
+  
+  
   // Handle clear button for all added drugs
   const handleClear = () => {
     setDrugList([]);
     setInteractionMessage(null); // Clear the interaction message
   };
 
-  // Placeholder function to check interactions
+  // 
   const checkInteractions = () => {
     if (drugList.length < 2) {
       setInteractionMessage("Please add at least two drugs to check interactions.");
       return;
     }
-
-    // Placeholder logic for interactions
-    const interactions = `Combining ${drugList.join(", ")} may have potential risks. Please consult a healthcare professional.`;
-    setInteractionMessage(interactions);
-
-    // Clear the drug list after displaying the message
+  
+    const normalizedList = drugList.map(d => aliasMap[d] || d); // normalize before comparing
+    const interactionsFound: string[] = [];
+  
+    for (let i = 0; i < normalizedList.length; i++) {
+      for (let j = i + 1; j < normalizedList.length; j++) {
+        const drugA = normalizedList[i].toLowerCase();
+        const drugB = normalizedList[j].toLowerCase();
+        const key = [drugA, drugB].sort().join("+");
+  
+        if (interactionMap[key]) {
+          interactionsFound.push(`${drugList[i]} + ${drugList[j]}: ${interactionMap[key]}`);
+        }
+      }
+    }
+  
+    if (interactionsFound.length > 0) {
+      setInteractionMessage(interactionsFound.join("\n"));
+    } else {
+      setInteractionMessage("No known interactions found. Please consult a professional.");
+    }
+  
     setDrugList([]);
   };
+  
+  
 
   // Function to remove a specific drug from the list
   const removeDrug = (drug: string) => {
@@ -133,10 +190,11 @@ export default function Home() {
             )}
           </div>
 
-          {/* Interaction Message */}
           {interactionMessage && (
-            <div className="mt-4 bg-zinc-800 text-white p-4 rounded-md w-96 text-center">
-              {interactionMessage}
+            <div className="mt-4 bg-zinc-800 text-white p-4 rounded-md w-96 text-left text-xl space-y-2 border border-zinc-600">
+              {interactionMessage.split('\n').map((line, idx) => (
+                <div key={idx}>{line}</div>
+              ))}
             </div>
           )}
 
@@ -150,10 +208,9 @@ export default function Home() {
                 <span className="mr-2">{drug}</span>
                 <button
                   onClick={() => removeDrug(drug)}
-                  className="bg-red-600 text-white px-2 py-1 rounded-md hover:bg-red-700 transition duration-300"
+                  className="-mr-3 cursor-pointer"
                 >
-                  Delete
-                  <img src='/safe-sub/public/delete.png'></img>
+                  <img src="/delete.svg" alt="Delete" className="w-5 h-2" />
                 </button>
               </div>
             ))}
@@ -164,13 +221,13 @@ export default function Home() {
             <div className="mt-4 flex gap-4">
               <button
                 onClick={checkInteractions}
-                className="bg-green-600 text-white py-2 px-6 rounded-md hover:bg-green-700 transition duration-300"
+                className="bg-zinc-900 hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-white"
               >
                 Check Interactions
               </button>
               <button
                 onClick={handleClear}
-                className="bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition duration-300"
+                className="bg-zinc-900 hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-white"
               >
                 Clear All
               </button>
