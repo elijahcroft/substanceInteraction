@@ -6,12 +6,20 @@ import { usePathname } from 'next/navigation';
 export default function Navbar() {
   const currentPath = usePathname();
 
-  const linkClass = (path: string) =>
-    `text-2xl px-3 py-1 rounded transition duration-200 ${
-      currentPath === path
-        ? 'bg-zinc-900 text-red-50 font-bold'
+  const linkClass = (path: string) => {
+    const isActive =
+      path === '/'
+        ? currentPath === '/'
+        : currentPath.startsWith(path);
+  
+    return `text-xl px-3 py-1 rounded transition duration-200 ${
+      isActive
+        ? 'bg-zinc-900 text-gray-500 font-bold'
         : 'text-white hover:text-blue-400 underline underline-offset-4'
     }`;
+  };
+  
+  
 
   return (
     <div className="flex justify-between items-center mb-5 px-10 bg-zinc-900 h-20">

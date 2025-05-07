@@ -38,12 +38,6 @@ const drugOptions = [
 
 const extendedDrugOptions = [...drugOptions, ...Object.keys(aliasMap)];
 
-
-
-
-
-
-
 export default function Home() {
   const [drugInput, setDrugInput] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -156,10 +150,32 @@ export default function Home() {
         <Navbar />
 
         {/* Main content */}
-        <div className="flex flex-col items-center text-center p-20 space-y-10">
+        <div className="flex flex-col items-center text-center p-20 space-y-10" style={{ minHeight: '500px' }}>
           <div>
             <p className="text-5xl font-bold text-white">Understand the Risks of</p>
-            <p className="text-5xl font-bold text-white">Mixing Drugs</p>
+            <p className="text-5xl font-bold text-white mt-3">Mixing Drugs</p>
+          </div>
+
+          {/* Buttons Placeholder */}
+          <div className="mt-4 flex gap-4 h-12 transition-all duration-300 ease-in-out">
+            {drugList.length > 0 ? (
+              <>
+                <button
+                  onClick={checkInteractions}
+                  className="bg-zinc-900 hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-white transition-all duration-300 ease-in-out"
+                >
+                  Check Interactions
+                </button>
+                <button
+                  onClick={handleClear}
+                  className="bg-zinc-900 hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-white transition-all duration-300 ease-in-out"
+                >
+                  Clear All
+                </button>
+              </>
+            ) : (
+              <div className="h-full"></div>
+            )}
           </div>
 
           {/* Input Fields */}
@@ -175,13 +191,13 @@ export default function Home() {
             {suggestions.length > 0 && (
               <div
                 className="bg-zinc-800 border border-zinc-200 rounded-b-md w-full absolute z-10 overflow-y-auto"
-                style={{ maxHeight: '150px' }}
+                style={{ maxHeight: '200px' }}
               >
                 {suggestions.map((drug, index) => (
                   <div
                     key={index}
                     onClick={() => handleSuggestionClick(drug)}
-                    className="p-3 text-white hover:bg-zinc-600 cursor-pointer"
+                    className="p-3 text-white hover:bg-zinc-600 cursor-pointer text-xl"
                   >
                     {drug}
                   </div>
@@ -215,24 +231,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          {/* Buttons */}
-          {drugList.length > 0 && (
-            <div className="mt-4 flex gap-4">
-              <button
-                onClick={checkInteractions}
-                className="bg-zinc-900 hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-white"
-              >
-                Check Interactions
-              </button>
-              <button
-                onClick={handleClear}
-                className="bg-zinc-900 hover:bg-blue-500 text-white font-bold rounded-md py-2 px-4 border-1 border-white"
-              >
-                Clear All
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </>

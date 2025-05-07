@@ -263,7 +263,7 @@
     "Caffeine": "⭘ Neutral or unknown: Mild increase in stimulation; no major interaction.",
     "Alcohol": "⬇️ Decreased effect: Reduced psychedelic effects; increased risk of nausea and dehydration.",
     "GHB/GBL": "⬇️ Decreased effect: Sedation counteracts psychedelic effects; risk of respiratory depression.",
-    "Opioids": "⭘ Neutral or unknown: No significant interaction; sedation may counteract effects.",
+    "Opioids": "⬆️ Increased effect: Enhanced euphoria and dissociation; ",
     "Tramadol": "☠️ Danger: High risk of seizures and serotonin syndrome.",
     "Benzodiazepine": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
     "MAOIs": "⬇️ Decreased effect: Risk of serotonin syndrome and unpredictable effects.",
@@ -673,7 +673,33 @@
     "Weed": "⚠️ Risky combo: Heavy sedation.",
     "Adderall": "⭘ Neutral or unknown: Counteracting effects.",
     "Opioids": "☠️ Danger: Dangerous sedation.",
-    "SSRIs": "⭘ Neutral or unknown: May increase sedation."
+    "SSRIs": "⭘ Neutral or unknown: May increase sedation.",
+    "MDMA": "⬇️ Decreased effect: Risk of serotonin syndrome and unpredictable effects.",
+    "LSD": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "Mushrooms": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "DMT": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "Mescaline": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "DOx": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "NBOMes": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "2C-x": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "2C-T-x": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "5-MeO-xXT": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "Cannabis": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "Ketamine": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "MXE": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "DXM": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "Nitrous": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "Amphetamines": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+   
+    "Cocaine": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "Caffeine": "⭘ Neutral or unknown: Mild increase in stimulation; no major interaction.",
+    
+    "GHB/GBL": "⬇️ Decreased effect: Sedation counteracts psychedelic effects; risk of respiratory depression.",
+    
+    "Tramadol": "☠️ Danger: High risk of seizures and serotonin syndrome.",
+    "Benzodiazepine": "⬇️ Decreased effect: Reduced psychedelic effects; increased sedation.",
+    "MAOIs": "⬇️ Decreased effect: Risk of serotonin syndrome and unpredictable effects."
+    
   },
   "Ibuprofen": {
     "Alcohol": "⚠️ Risky combo: Stomach bleeding risk.",
