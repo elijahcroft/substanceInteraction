@@ -2,12 +2,13 @@ import Navbar from "../components/navbar";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen bg-zinc-900 text-white">
+    <div className="w-full min-h-screen bg-zinc-900 bg-[radial-gradient(ellipse_at_75%_80%,_rgba(255,255,255,0.015)_0%,_transparent_100%)]">
       <Navbar />
       <div className="grid grid-cols-1 place-items-center px-6 py-10">
+    
         <p className="text-5xl underline underline-offset-8 mb-10">About</p>
 
-        <div className="bg-zinc-800 p-6 rounded-lg shadow-[0_0_10px_rgba(255,255,255,0.05)] w-full max-w-4xl text-xl mb-8">
+        <div className="bg-zinc-800 p-6 rounded-lg shadow-[0_0_10px_rgba(255,255,255,0.05)] w-full max-w-4xl text-xl mb-8 ">
           <h1 className="text-4xl mb-3">Our Mission</h1>
           <p>
             SafeSubstance exists to reduce harm through education. We believe that understanding is the first step
@@ -31,8 +32,7 @@ export default function Home() {
           <p>
             I'm Elijah, a student of computer science and philosophy who believes that technology can serve as a moral tool.
             Safe drug use is something I care deeply about—not just because of its importance to health, but because I believe
-            every person deserves access to knowledge that can protect their life. This project is a reflection of that belief,
-            built with the help of friends who share a commitment to harm reduction, education, and empathy.
+            every person deserves access to knowledge that can protect their life. This project is a reflection of that belief.
           </p>
         </div>
 

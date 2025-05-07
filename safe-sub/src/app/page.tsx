@@ -59,7 +59,7 @@ export default function Home() {
       const filteredSuggestions = extendedDrugOptions.filter(
         (drug) =>
           drug.toLowerCase().startsWith(input.toLowerCase()) &&
-          !drugList.includes(aliasMap[drug.toLowerCase()] || drug)
+          !drugList.includes(aliasMap[drug.toLowerCase()] || drug )
       );
       
       setSuggestions(filteredSuggestions);
@@ -181,7 +181,7 @@ export default function Home() {
           </div>
 
           {/* Input Fields */}
-          <div className="relative w-96 text-lg">
+          <div className="relative w-150 text-lg">
             <input
               type="text"
               placeholder="Search Drugs"
@@ -190,29 +190,28 @@ export default function Home() {
               onKeyPress={handleKeyPress}
               className="w-full p-4 rounded-t-md bg-zinc-800/30 backdrop-blur-md border border-zinc-600 text-white"
             />
-            {suggestions.length > 0 && (
-              <div
-                className="bg-zinc-800/100   backdrop-blur-md border border-zinc-200 rounded-b-md w-full absolute z-10 overflow-y-auto"
-                style={{ maxHeight: '200px' }}
-              >
-                {suggestions.map((drug, index) => (
-                  <div
-                    key={index}
-                    onClick={() => handleSuggestionClick(drug)}
-                    className="p-3 text-white hover:bg-zinc-600 cursor-pointer text-lg"
-                  >
-                    {drug}
-                  </div>
-                ))}
-              </div>
-            )}
+            <div
+              className={`bg-zinc-800/100 backdrop-blur-md border border-zinc-200 rounded-b-md w-full absolute z-10 overflow-y-auto text-left transition-all duration-300 ease-in-out transform origin-top ${
+                suggestions.length > 0 ? 'opacity-100 scale-y-100 max-h-52' : 'opacity-0 scale-y-0 max-h-0'
+              }`}
+            >
+              {suggestions.map((drug, index) => (
+                <div
+                  key={index}
+                  onClick={() => handleSuggestionClick(drug)}
+                  className="p-3 text-white hover:bg-zinc-600 cursor-pointer text-lg border-b border-zinc-600"
+                >
+                  {drug}
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Interaction Message */}
           {interactionMessage && (
             <div
-              className={`-mt-1 bg-zinc-800 text-white p-4 rounded-md w-96 text-left text-xl space-y-2 border border-zinc-600 transform transition-all duration-300 hover:scale-101 ${
-                suggestions.length > 0 ? 'mt-52' : 'mt-4' // Adjust margin based on suggestions
+              className={`-mt-5 bg-zinc-800 text-white p-4 rounded-md w-96 text-left text-xl space-y-2 border border-zinc-600 transform transition-all duration-300 hover:scale-101 w-150 ${
+                suggestions.length > 0 ? 'mt-52' : '-mt-2' // Adjust margin based on suggestions
               }`}
             >
               {interactionMessage.split('\n').map((line, idx) => (

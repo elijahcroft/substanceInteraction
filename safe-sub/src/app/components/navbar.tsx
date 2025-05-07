@@ -32,7 +32,7 @@ export default function Navbar() {
       
       <div className="flex gap-x-5">
         <Link href="/" className={linkClass('/')}>Home</Link>
-        <Link href="/near" className={linkClass('/near')}>Near You</Link>
+        
         <Link href="/learn" className={linkClass('/learn')}>Learn</Link>
         <Link href="/about" className={linkClass('/about')}>About</Link>
       </div>
