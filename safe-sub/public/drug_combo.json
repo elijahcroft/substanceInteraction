@@ -722,5 +722,10 @@
     "SSRIs": "✖️ Contraindicated: Duplicate mechanism.",
     "Tramadol": "☠️ Danger: Seizure and serotonin risk.",
     "Weed": "⭘ Neutral or unknown: Possible anxiety increase."
+  },
+  "Prozac": {
+    "Alcohol": "⚠️ Risky combo: Can quickly increase sedation. This effect can lead to potentially dangerous situations. These include poor decision-making, impaired driving, and an increased risk of falls and injuries.",
+    "Adderall": ""
+    
   }
 }

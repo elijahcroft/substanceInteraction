@@ -36,17 +36,19 @@ export default function Learn() {
         <div className="mb-10">
           <h1 className="text-3xl font-bold mb-8">Before Use</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-lg">
-            <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform ">
-              <h2 className="text-xl font-semibold mb-2">🧪 Use Reagent Test Kits</h2>
+            <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform " >
+              
+              <h2 className="text-xl font-semibold mb-2" >🧪 Use Reagent Test Kits</h2>
               <p>
-                Reagents can detect dangerous additives. Test before taking any unknown substance.
+                Reagents can detect dangerous additives. Test before taking any unknown substance. I recommend buying from this trusted seller:
+                <a href="https://dancesafe.org/shop/"  className="text-blue-200 underline cursor-pointer hover:scale-105"> DanceSafe</a>
               </p>
             </div>
             
             <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
               <h2 className="text-xl font-semibold mb-2">🧍 Have a Sober Friend</h2>
               <p>
-                Someone present can help if something goes wrong. Never trip or take risky combos alone.
+                Someone present can help if something goes wrong. Never trip or take risky combos alone. You can find someone to talk to when you use at <a href="https://neverusealone.com" className="text-blue-200 underline cursor-pointer"> NeverUseAlone.com</a>
               </p>
             </div>
             <div className="bg-zinc-800 p-6 rounded-lg shadow hover:scale-105 transition-transform">
