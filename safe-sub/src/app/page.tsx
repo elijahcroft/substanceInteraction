@@ -9,6 +9,7 @@ const aliasMap: { [key: string]: string } = {
   "Weed": "Cannabis",
   "Pot": "Cannabis",
   "Marijuana": "Cannabis",
+  "Cigarettes": "Nicotine",
   "Tylenol": "Acetaminophen",
   "Advil": "Ibuprofen",
   "Valium": "Diazepam",
@@ -19,13 +20,10 @@ const aliasMap: { [key: string]: string } = {
   "Percocet": "Oxycodone",
   "Methamphetamine": "Amphetamines",
   "Lean": "Opioids",
-
   "Adderall" : "Amphetamines",
   "Hydrocodone": "Opioids",
   "Vicodin": "Opioids",
   "Codeine": "Opioids",
-  
-  
   "Heroin": "Opioids",
   "Fentanyl": "Opioids",
   "Tramadol": "Tramadol"
