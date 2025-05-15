@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Navbar from './components/navbar';
 import { getInteraction } from './components/getInteractions';
+import Head from 'next/head';
 const aliasMap: { [key: string]: string } = {
   "Weed": "Cannabis",
   "Pot": "Cannabis",
@@ -145,13 +146,21 @@ export default function Home() {
 
   return (
     <>
+
+    <Head>
+      <title>SafeSubstance | Drug Mix Checker</title>
+      <meta name="description" content="Check drug interactions easily. Learn about the risks of mixing LSD, Xanax, Cannabis, MDMA, and more." />
+
+      <link rel="canonical" href="https://safesubstance.org" />
+    </Head>
+      
      <div className="w-full min-h-screen bg-zinc-900 bg-[radial-gradient(ellipse_at_75%_80%,_rgba(255,255,255,0.015)_0%,_transparent_100%)]">
 
         {/* Navbar */}
         <Navbar />
 
         {/* Main content */}
-        <div className="flex flex-col items-center text-center p-20 space-y-10" style={{ minHeight: '500px' }}>
+        <main className="flex flex-col items-center text-center p-20 space-y-10" style={{ minHeight: '500px' }}>
           <div className="text-5xl font-bold text-white ">
           
             <p className="text-5xl font-bold text-white">Understand the <span className='animate-pulse text-red-100'>Risks</span> of</p>
@@ -241,7 +250,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </main>
       </div>
     </>
   );

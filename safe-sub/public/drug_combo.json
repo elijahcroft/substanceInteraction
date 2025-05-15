@@ -727,5 +727,32 @@
     "Alcohol": "⚠️ Risky combo: Can quickly increase sedation. This effect can lead to potentially dangerous situations. These include poor decision-making, impaired driving, and an increased risk of falls and injuries.",
     "Adderall": ""
     
+  },
+  "Nicotine":{
+    "2C-T-x": "⭘ Neutral: Slight increase in stiumlation possible synergy. No major interaction.",
+    "2C-x": "⭘ Neutral: Slight increase in stiumlation possible synergy. No major interaction.",
+    "5-MeO-xXT": "⭘ Neutral: Slight increase in stiumlation possible synergy.",
+    "Alcohol": "⬇️ Slightly Decreased effect: Reduced effects from alcohol. No major interaction.",
+    "Amphetamines": "⚠️⬆️ Slight risk: Slighty increased stimulation; risk of anxiety and cardiovascular strain. May lead to overstimulation.",
+    "Benzodiazepine": "⭘ ⬇️ Neutral: Slight decrease in stiumlation. No major interaction.",
+    "Caffeine": "⭘ Neutral: Mild increase in stimulation; no major interaction.",
+    "Cannabis": "⭘ Neutral: Mild Decrease in stimulation; no major interaction.",
+    "Cocaine": "⚠️⬆️ Slight risk: Slighty increased stimulation; risk of anxiety and cardiovascular strain. May lead to overstimulation.",
+    "DMT": "⭘ Neutral: Slight increase in stiumlation possible synergy. No major interaction.",
+    "DOx":  "⭘ Neutral: Slight increase in stiumlation possible synergy. No major interaction.",
+    "DXM": "⭘ Neutral: Slight increase in stiumlation possible synergy. No major interaction.",
+    "GHB/GBL": "⬇️ Decreased effect: Sedation counteracts stimulant effects; risk of respiratory depression.",
+    "Ketamine": "⭘ Neutral: Mild increase in stimulation; no major interaction.",
+    "LSD": "⚠️⬆️ Slight Risk: Increased stimulation; risk of anxiety and cardiovascular strain.",
+    "MAOIs": "⬇️ Decreased effect: Risk of serotonin syndrome and unpredictable effects.",
+    "MDMA": "⬆️ Increased effect: Enhanced euphoria and sensory effects; risk of overstimulation.",
+    "Mescaline": "⚠️⬆️ Slight Risk: Increased stimulation; risk of anxiety and cardiovascular strain.",
+    "Mushrooms": "⚠️⬆️ Slight Risk: Increased stimulation; risk of anxiety and cardiovascular strain.",
+    "MXE": "⭘ Neutral: Mild increase in stimulation; no major interaction.",
+    "NBOMes": "⭘ Neutral: Mild increase in stimulation; no major interaction.",
+    "Nitrous": "⭘ Neutral: Mild increase in stimulation; no major interaction.",
+    "Opioids": "⭘ Neutral or unknown: No significant interaction; sedation may counteract effects.",
+    "SSRIs": "⭘ Neutral: Mild increase in stimulation; no major interaction.",
+    "Tramadol": "⭘ Neutral: Mild increase in stimulation; no major interaction."
   }
 }
