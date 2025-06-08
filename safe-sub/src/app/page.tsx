@@ -5,6 +5,9 @@ import Image from 'next/image';
 import Navbar from './components/navbar';
 import { getInteraction } from './components/getInteractions';
 import Head from 'next/head';
+import Popup from './components/disclaimer';
+
+
 const aliasMap: { [key: string]: string } = {
   "Weed": "Cannabis",
   "Pot": "Cannabis",
@@ -38,6 +41,7 @@ const drugOptions = [
 const extendedDrugOptions = [...drugOptions, ...Object.keys(aliasMap)];
 
 export default function Home() {
+  const [showPopup, setShowPopup] = useState<boolean>(false);
   const [drugInput, setDrugInput] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [drugList, setDrugList] = useState<string[]>([]);
@@ -164,6 +168,12 @@ export default function Home() {
             <p className="text-5xl font-bold text-white">Understand the <span className='animate-pulse text-red-100'>Risks</span> of</p>
             <p className="text-5xl font-bold text-white mt-3">Mixing Drugs</p>
           </div>
+              <div>
+          
+          {showPopup && (
+            <Popup message="Hello from TS!" onClose={() => setShowPopup(false)} />
+          )}
+        </div>
 
           {/* Buttons Placeholder */}
           <div className="mt-4 flex gap-4 h-12 transition-all duration-300 ease-in-out">
