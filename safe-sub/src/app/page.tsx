@@ -25,6 +25,7 @@ const aliasMap: { [key: string]: string } = {
   "Lean": "Opioids",
   "Adderall" : "Amphetamines",
   "Hydrocodone": "Opioids",
+  "Oxycodone": "Opioids",
   "Vicodin": "Opioids",
   "Codeine": "Opioids",
   "Heroin": "Opioids",
