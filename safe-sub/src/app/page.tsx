@@ -36,7 +36,7 @@ const drugOptions = [
   "LSD", "Mushrooms", "DMT", "Mescaline", "DOx", "NBOMes", "2C-x", "2C-T-x", "5-MeO-xXT", "Cannabis",
   "Ketamine", "MXE", "DXM", "Nitrous", "Amphetamines", "MDMA", "Cocaine", "Caffeine", "Alcohol",
   "GHB/GBL", "Opioids", "Tramadol", "Benzodiazepine", "MAOIs", "SSRIs",
-     "Zoloft", "Xanax", "Tylenol", "Ibuprofen", "Benadryl", "Melatonin", "Oxycodone", "Valium", "Lexapro"
+     "Zoloft", "Xanax", "Tylenol", "Ibuprofen", "Benadryl", "Melatonin",  "Valium", "Lexapro"
 ];
 
 const extendedDrugOptions = [...drugOptions, ...Object.keys(aliasMap)];
